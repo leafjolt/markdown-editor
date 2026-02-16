@@ -49,4 +49,19 @@ Handling it in CSS groups all the styling/design together so it's all in one pla
 
 The styles inside the media query will not kick in even when the condition is met; CSS will just use the base style.
 
-**
+### Milestone 3 Quiz
+**What is the difference between `data` and `computed` in Vue?**
+
+`data` represents state properties that get updated and read directly in the app. `computed` contains functions that derive properties/values from data or other information in the app.
+
+**Why should we not manipulate DOM manually in Vue?**
+
+Vue automatically handles DOM manipulation when a value is updated, so manipulating it manually would just be messing with this.
+
+**What does `v-html` do?**
+
+It injects raw HTML into an element based on what Vue property/computed value is put into it.
+
+**Why must we strip HTML before counting characters?**
+
+If we don't strip HTML, then the tags and angle brackets will be counted as characters, when we just want basic text to be counted.
