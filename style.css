@@ -1,0 +1,26 @@
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+@media (min-width: 768px) {
+    #app {
+        flex-direction: row;
+    }
+}
+
+#input {
+    resize: none;
+}
+
+#input, #output {
+    flex: 1;
+}
+
+#themeToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
