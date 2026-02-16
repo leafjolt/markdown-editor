@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 #app {
     display: flex;
     flex-direction: column;
@@ -13,14 +18,49 @@
 
 #input {
     resize: none;
+    border: none;
+    outline: none;
+}
+
+#input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 #input, #output {
     flex: 1;
+    padding: 1rem;
+}
+
+#output {
+    overflow: auto;
+}
+
+@media (max-width: 767.98px) {
+    #output {
+        border-top: 1px solid #ccc;
+    }
+}
+
+@media (min-width: 768px) {
+    #output {
+        border-left: 1px solid #ccc
+    }
 }
 
 #themeToggle {
     position: absolute;
     top: 10px;
     right: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#counter {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    z-index: 1000;
 }
