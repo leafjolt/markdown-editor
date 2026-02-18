@@ -45,6 +45,9 @@ const app = Vue.createApp({
     methods: {
         toggleTheme() {
             this.theme = this.theme == 'light' ? 'dark' : 'light';
+        },
+        clear() {
+            this.message = '';
         }
     }
 });

@@ -23,6 +23,7 @@
             <textarea id="input" placeholder="Type here..." v-model="message"></textarea>
             <div id="output" v-html="htmlOutput"></div>
             <div id="counter">{{ charCount }}</div>
+            <button id="clear" @click="clear">Clear</button>
             <span id="themeToggle" class="material-icons" @click="toggleTheme">{{ themeIcon }}</span>
         </div>
         <script src="app.js"></script>
