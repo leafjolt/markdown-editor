@@ -10,15 +10,41 @@
 const app = Vue.createApp({
     data() {
         return {
-            message: ''
+            message: '',
+            theme: 'light',
         };
+    },
+    mounted() {
+        const savedMessage = localStorage.getItem('markdownText');
+        if (savedMessage) {
+            this.message = savedMessage;
+        }
+        const savedTheme = localStorage.getItem('theme');
+        this.theme = savedTheme || 'light';
     },
     computed: {
         htmlOutput() {
             return marked.parse(this.message);
         },
         charCount() {
-            return this.htmlOutput.replace(/<[^>]*>/g, '').length;
+            return this.message.replace(/<[^>]*>/g, '').length;
+        },
+        themeIcon() {
+            return this.theme == 'light' ? 'dark_mode' : 'light_mode';
+        }
+    },
+    watch: {
+        message(newValue) {
+            localStorage.setItem('markdownText', newValue);
+        },
+        theme(newValue) {
+            document.documentElement.setAttribute('data-bs-theme', this.theme);
+            localStorage.setItem('theme', newValue);
+        }
+    },
+    methods: {
+        toggleTheme() {
+            this.theme = this.theme == 'light' ? 'dark' : 'light';
         }
     }
 });

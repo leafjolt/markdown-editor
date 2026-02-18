@@ -65,3 +65,20 @@ It injects raw HTML into an element based on what Vue property/computed value is
 **Why must we strip HTML before counting characters?**
 
 If we don't strip HTML, then the tags and angle brackets will be counted as characters, when we just want basic text to be counted.
+
+### Milestone 4 Quiz
+**What is localStorage?**
+
+localStorage is a browser API that lets you save values that persist after reload, so you can have text, theme, etc. saved when you close out and come back to the page.
+
+**When does `mounted()` run?**
+
+It runs after the page is loaded in but before the user interacts with anything.
+
+**What is a Vue watcher?**
+
+A Vue watcher is a function that watches for updates in state and runs whenever a certain state value is changed, so that corresponding updates to the HTML can be applied.
+
+**Why should theme state also be persisted?**
+
+It should be persisted so that when someone changes the site theme and then comes back later, the site maintains consistency and the user comes back to the same theme they chose.
