@@ -13,6 +13,8 @@ To run this locally, simply open `index.html` in your browser.
 
 ## AI Prompts I Used
 - Can I get the CDN links for these libraries: Bootstrap 5 (CSS) Material Icons Vue 3 CDN marked.js CDN
+- Where do you add methods in a Vue app setup?
+- How do you call a Vue method upon button click?
 
 ## Quizzes
 ### Milestone 1 Quiz
@@ -82,3 +84,16 @@ A Vue watcher is a function that watches for updates in state and runs whenever 
 **Why should theme state also be persisted?**
 
 It should be persisted so that when someone changes the site theme and then comes back later, the site maintains consistency and the user comes back to the same theme they chose.
+
+### Final Reflection Quiz
+**How did you utilise AI to help you code the app, show some examples.**
+
+I utilized AI when I needed some guidance on how to use a part of a framework I never had before, or to generate boilerplate code that could be redundant otherwise. For example, I asked it to generate the `<link>` tags with CDN links to the frameworks we were using so I wouldn't have to look that up myself. I also asked it about how to add methods to a Vue app so I could get a good explanation of that concept.
+
+**What part of the build was most challanging?**
+
+The most challenging part of the build for me was the dark mode toggle; even though it looks simple, it required a lot of new material. This required learning several new Vue concepts/properties at once and linking them together, like watchers, methods, event handlers, etc. 
+
+**What is the benefit of using a framework such as Vue for frontend development?**
+
+Vue handles a lot of the main parts of frontend development automatically, especially the updating of the DOM when state is changed. Without using a framework, we would have to handle this all manually, covering every single event we need and updating things manually as we go. Vue takes care of a lot of this boilerplate and lets us focus on coding the actual main logic of the app, rather than having to worry about handling basic state updates each and every time.
